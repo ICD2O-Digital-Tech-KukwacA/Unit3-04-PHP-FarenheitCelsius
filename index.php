@@ -15,24 +15,26 @@
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- Title -->
-    <title>Volume of a Sphere</title>
+    <title>Fahrenheit to Celsius</title>
   </head>
   <body>
 		<!-- php echo to print the html to the page -->
     <?php 
-			echo "<h1>Volume of a Sphere</h1>";
-			echo "<h3>This program will calculate the volume of a Sphere</h3>";
+			echo "<h1>Fahrenheit to Celsius</h1>";
+			echo "<h3>This program will convert temperature in Fahrenheit to Celsius.</h3>";
 		?>
-		<!-- form to get the bases and height from the user -->
+		<!-- form to get the temperature in Fahrenheit from the user -->
     <form action="./results.php" method="post" target="results">
-      <label for="radius">Radius (cm):</label>
-      <input type="float" id="radius" placeholder="Enter value" name="radius"><br><br>
-      <input type="submit" value="Calculate Volume">
+      <label for="fahrenheit">Temperature in Fahrenheit</label>
+      <input type="float" id="fahrenheit" placeholder="Enter value..." name="fahrenheit"><br><br>
+      <input type="submit" value="Convert to Temperature">
     </form>
 
 			<!-- iframe for the results to show on the web page. -->
 			<iframe id="results" name="results">
-        The volume of the sphere is <?php echo="$volume" ?><sup>3</sup>.
+        <div id="user-info">
+        <div id="$temp"></div>
+        </div>
       </iframe>
 	</body>
 </html>

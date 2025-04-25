@@ -1,11 +1,10 @@
 <?php
-	// get the base and height from the textfields
-	$radius = $_POST['radius'];
-	const PI = Math.PI;
+	// get value of temperature from the textfields
+	$fahrenheit = $_POST['fahrenheit'];
 
-	// calculate the area
-	$volume = (4/3) * PI * pow($radius,3);
-	$volume = round($volume,2);
+	// convert the temperature from Fahrenheit to Celsius
+    $temp = ($fahrenheit - 32) * (5/9);
+    $temp = round($temp,2);
 ?>
 	<h3>Results:</h3>
-	The volume of the sphere is <?php echo "$volume" ?>cm<sup>3</sup>.
+	<?php echo "$fahrenheit"?>°F in Celsius is <?php echo "$temp" ?>°C.
